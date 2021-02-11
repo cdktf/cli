@@ -1,8 +1,11 @@
 FROM node:15.8.0
 
-LABEL org.opencontainers.image.source https://github.com/cdktf/cli
 ARG TF_VERSION
 ARG CDKTF_VERSION
+
+LABEL org.opencontainers.image.source https://github.com/cdktf/cli
+LABEL terraform.version ${TF_VERSION}
+LABEL cdktf.version ${CDKTF_VERSION}
 RUN set -ex; \
 	\
 	wget -O terraform.zip "https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip"; \
