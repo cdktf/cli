@@ -1,5 +1,6 @@
 FROM node:15.8.0
 
+LABEL org.opencontainers.image.source https://github.com/cdktf/cli
 ARG TF_VERSION
 ARG CDKTF_VERSION
 RUN set -ex; \
